@@ -1,0 +1,21 @@
+{
+    "name": "gaotiefeng/tool",
+    "description": "php tools",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1"
+    },
+    "authors": [
+        {
+            "name": "gaotiefeng",
+            "email": "1096392101@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gao\\tool\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
