@@ -16,7 +16,7 @@ class Client
      * 获取客户端ip
      */
     public static function get_client_ip() {
-        $ip = $_SERVER['REMOTE_ADDR'];
+        $ip =  $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
         if (isset($_SERVER['HTTP_CLIENT_IP']) && preg_match('/^([0-9]{1,3}\.){3}[0-9]{1,3}$/', $_SERVER['HTTP_CLIENT_IP'])) {
             $ip = $_SERVER['HTTP_CLIENT_IP'];
         } elseif(isset($_SERVER['HTTP_X_FORWARDED_FOR']) AND preg_match_all('#\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}#s', $_SERVER['HTTP_X_FORWARDED_FOR'], $matches)) {
@@ -30,11 +30,4 @@ class Client
         return $ip;
     }
 
-    /**
-     * 获取当前协议
-     */
-    public static function getHttpProtocol(): string
-    {
-        return ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
-    }
 }
