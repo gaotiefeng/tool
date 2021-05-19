@@ -14,7 +14,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Gao\\tool\\": "src/"
+            "Gao\\tool\\": "src/",
+            "Gao\\tests\\tool\\": "tests/"
         }
     },
     "minimum-stability": "dev",
