@@ -27,4 +27,11 @@ class HelperTest extends TestCase
         $os = \Gao\tool\helper\Service::getOS();
         $this->assertEquals("Linux",$os);
     }
+
+    public function testHelperArr()
+    {
+        $data = [1=>'12',2=>'2,3',3=>'3,4'];
+
+        $this->assertEquals([1,2,3], \Gao\tool\helper\Arr::keys($data));
+    }
 }
