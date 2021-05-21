@@ -20,7 +20,7 @@ trait Single
     /** 防止使用clone克隆对象 */
     private function __clone(){}
 
-    /** 当前类的静态 实列是不会变 */
+    /** 当前类的静态 Single 实列是不会变 */
     static public function getInstance()
     {
         /** 判断$instance是否存在的对象，不是则创建*/
