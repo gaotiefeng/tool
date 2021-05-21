@@ -1,11 +1,12 @@
 <?php
+// -----------------------------------------------------
+// Created by : tool
+// -----------------------------------------------------
+// Date: 2021/5/21
+// -----------------------------------------------------
+// User: tf <1096392101@qq.com>
+// -----------------------------------------------------
 declare (strict_types=1);
-/**
- * Created by : PhpStorm
- * User: tiefeng
- * Date: 2021/5/19
- * Time: 15:18
- */
 
 namespace Gao\tool\helper;
 
@@ -466,18 +467,6 @@ class Arr
     public static function end(array &$array)
     {
         return end($array);
-    }
-
-    /**
-     * 数组中的值赋给一组变量
-     * @param array $array
-     * @param ...$values
-     * @return array
-     */
-    public static function list(array $array,...$values): array
-    {
-        list(...$values) = $array;
-        return $array;
     }
 
     /**
