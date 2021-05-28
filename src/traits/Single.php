@@ -41,4 +41,9 @@ trait Single
         }
         return static::$instance;
     }
+
+    /**
+     * 防止反序列化（这将创建它的副本）
+     */
+    private function __wakeup(){}
 }
